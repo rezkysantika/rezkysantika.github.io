@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezky Dwisantika</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Nunito', sans-serif;
+        }
+        
+        body {
+            background: #F6F6F6;
+            padding-top: 80px;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 80px;
+            background: #2A2A2A;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            color: #E1C9BF;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #E1C9BF;
+            font-size: 18px;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 28px;
+            color: #E1C9BF;
+            cursor: pointer;
+        }
+
+        section {
+            width: 80%;
+            margin: 60px auto;
+            padding: 20px;
+        }
+
+        h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        @media (max-width: 768px) {
+        #about .project {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+        }
+
+        #about .project img {
+            width: 80%;
+            max-width: 250px;
+            border-radius: 10px;
+        }
+
+        #about .project-text p {
+            text-align: left;
+        }
+    }
+
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        .projects-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+
+        .project {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .project img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+        }
+
+        .project-desc {
+            font-size: 18px;
+        }
+
+        @media (max-width: 768px) {
+            .project {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .project img {
+                max-width: 100%;
+                margin: 0 auto;
+        }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                height: auto;
+                padding: 10px;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                background: #2A2A2A;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links li {
+                margin: 10px 0;
+            }
+
+            .projects-container {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">Rezky Dwisantika Pujiastuti</div>
+        <div class="menu-toggle">☰</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#cv">CV</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <h2>📖 About Me</h2>
+        <div class="projects-container">
+            <div class="project">
+                <img src="./profile-me.jpg" alt="Project 1">
+                <div class="project-text">
+                    <p>Hello! I’m Rezky. I am a third-year bachelor student from Sepuluh Nopember Institute of Technology, Surabaya, Indonesia, majoring in Computer Engineering. <br><br>
+
+                        I am a junior researcher with a broad interest in Human-Computer Interaction field along with Computational Social Science and Human-Centered Design. The exploration of human-centered computing, accessibility, wellbeing, and societal impact. Particularly, I’m
+                        interested in designing inclusive, user-friendly technologies and assistive applications by integrating HCI and UX
+                        research.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>💼 Projects</h2>
+        <div class="projects-container">
+            <div class="project">
+                <img src="./project1.png" alt="Project 1">
+                <div class="project-desc">
+                    <p>A family health monitoring application integrated with a smartwatch and prescriptive analytics to support health and communication, especially for families separated by distance or time.</p><br>
+                    <p><strong>Finalist in GemasTIK XVII UX Design Competition</strong></p>
+                </div>
+            </div>
+            <div class="project">
+                <img src="./project2.png" alt="Project 2">
+                <div class="project-desc">
+                    <p>Platform that helps the public report power outages caused by roadside tree interference and assists PLN in making data-driven decisions for tree trimming based on image processing.</p><br>
+                    <p><strong>Finalist in GemasTIK XVII UX Software Development Competition</strong></p>
+                </div>
+            </div>
+            <div class="project">
+                <img src="./project3.png" alt="Project 3">
+                <div class="project-desc">
+                    <p>An innovative initiative aimed at fostering Green Cities by providing tax incentives to property owners who contribute to environmental sustainability by planting trees in their private green spaces. Includes scanning planted trees to extract their O2 and CO2 benefits using image processing, then converting the data into tax incentives.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <h2>🖼️ Gallery</h2>
+        <div class="gallery">
+            <img src="./img1.png" alt="Gallery Image">
+            <img src="./img2.JPG" alt="Gallery Image">
+            <img src="./img3.JPG" alt="Gallery Image">
+            <img src="./img4.jpg" alt="Gallery Image">
+            <img src="./img5.jpg" alt="Gallery Image">
+            <img src="./img6.jpg" alt="Gallery Image">
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>✉️ Contact</h2>
+        <p>📍 Surabaya, Indonesia 60111</p>
+        <p>📞 Phone: +62 81354 999 315</p>
+        <p>📧 Personal Email: rezkysantika21@gmail.com</p>
+        <p>📧 Campus Email: 5024221001@student.its.ac.id</p>
+        <p>🔗 LinkedIn: rezkysantika</p>
+        <p>🔗 Github: rezkysantika</p>
+        <p>🔗 Instagram: rezkysantika</p>
+    </section>
+
+    <script>
+        document.querySelector(".menu-toggle").addEventListener("click", function() {
+            document.querySelector(".nav-links").classList.toggle("active");
+        });
+    </script>
+</body>
+</html>
